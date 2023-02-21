@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/connorlogan/Desktop/BarbarianBlood/build",
+  "command": "/usr/bin/g++  -I/home/connorlogan/Desktop/BarbarianBlood/BarbarianBlood -isystem /usr/include/SDL2 -g -o CMakeFiles/BarbarianBlood.dir/main.cpp.o -c /home/connorlogan/Desktop/BarbarianBlood/main.cpp",
+  "file": "/home/connorlogan/Desktop/BarbarianBlood/main.cpp"
+}
+]
