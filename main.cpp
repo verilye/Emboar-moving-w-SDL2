@@ -1,4 +1,5 @@
 #include "SDL_config.h"
+#include "Input/Input.h"
 #include <iostream>
 
 // Compile and build setup with CMAKe
@@ -22,10 +23,11 @@ int main(int, char**){
     openNewWindow();
 
     //This gameloop is a single frame. Ill have to time it so that it runs at around 60fps
-
+    bool isRunning = true;
     while(isRunning){
 
         // Take any input from user
+        // Abstract it out using an interface
         Input();
         // Update the screen. This should continue even when no actions are being taken 
         Update();
