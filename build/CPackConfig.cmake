@@ -30,7 +30,7 @@ set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_SUMMARY "BarbarianBlood built using CMake"
 set(CPACK_GENERATOR "STGZ;TGZ;TZ")
 set(CPACK_INSTALL_CMAKE_PROJECTS "/home/connorlogan/Desktop/BarbarianBlood/build;BarbarianBlood;ALL;/")
 set(CPACK_INSTALL_PREFIX "/usr/local")
-set(CPACK_MODULE_PATH "")
+set(CPACK_MODULE_PATH "/home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles")
 set(CPACK_NSIS_DISPLAY_NAME "BarbarianBlood 0.1.0")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")
 set(CPACK_NSIS_INSTALLER_MUI_ICON_CODE "")

@@ -25,13 +25,54 @@ void openNewWindow(){
     if(!window_surface)
     {
         std::cout << "Failed to get the surface from the window\n";
+        std::cout << "SDL2 Error: "<< SDL_GetError()<<"\n";
         return;
     }
 
-    SDL_UpdateWindowSurface(window);
 
-    SDL_Delay(5000);
+    SDL_Surface* optimizedSurface = NULL;
+    SDL_Surface* image = IMG_Load("Emboar.png");
 
-   return;
+    if(!image)
+    {
+        std::cout<<"Failed to load image\n";
+        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
+        return;
+    }else
+    {
+
+        optimizedSurface = SDL_ConvertSurface(image, window_surface->format, 0);
+
+        if( optimizedSurface == NULL )
+        {
+            printf( "Unable to optimize image! SDL Error:", SDL_GetError() );
+        }
+
+        //Get rid of old loaded surface
+        SDL_FreeSurface( image );
+
+    }
+
+
+
+    bool keep_window_open = true;
+    while(keep_window_open)
+    {
+        SDL_Event e;
+        while(SDL_PollEvent(&e) > 0)
+        {
+            switch(e.type)
+            {
+                case SDL_QUIT:
+                    keep_window_open = false;
+                    break;
+            }
+
+            SDL_BlitSurface(optimizedSurface, NULL, window_surface, NULL);
+            SDL_UpdateWindowSurface(window);
+        }
+    }
+
+    return;
 
 };

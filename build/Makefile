@@ -523,6 +523,30 @@ BarbarianBlood/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/build
 .PHONY : BarbarianBlood/fast
 
+SDL_config.o: SDL_config.cpp.o
+.PHONY : SDL_config.o
+
+# target to build an object file
+SDL_config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o
+.PHONY : SDL_config.cpp.o
+
+SDL_config.i: SDL_config.cpp.i
+.PHONY : SDL_config.i
+
+# target to preprocess a source file
+SDL_config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.i
+.PHONY : SDL_config.cpp.i
+
+SDL_config.s: SDL_config.cpp.s
+.PHONY : SDL_config.s
+
+# target to generate assembly for a file
+SDL_config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.s
+.PHONY : SDL_config.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -587,6 +611,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... BarbarianBlood"
+	@echo "... SDL_config.o"
+	@echo "... SDL_config.i"
+	@echo "... SDL_config.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

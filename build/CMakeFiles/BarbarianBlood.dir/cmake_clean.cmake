@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "BarbarianBlood"
   "BarbarianBlood.pdb"
+  "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o"
+  "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o.d"
   "CMakeFiles/BarbarianBlood.dir/main.cpp.o"
   "CMakeFiles/BarbarianBlood.dir/main.cpp.o.d"
 )

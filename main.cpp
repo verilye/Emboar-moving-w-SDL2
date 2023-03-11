@@ -3,6 +3,9 @@
 #include <iostream>
 
 // Compile and build setup with CMAKe
+// Setup in cmake
+// https://code.visualstudio.com/docs/cpp/cmake-linux
+// Go down to the bottom bar and select build in vscode
 // Press f5 to run current version of project
 
 // HELPFUL LINKS

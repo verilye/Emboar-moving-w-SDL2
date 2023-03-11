@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/connorlogan/Desktop/BarbarianBlood/SDL_config.cpp" "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o.d"
   "/home/connorlogan/Desktop/BarbarianBlood/main.cpp" "CMakeFiles/BarbarianBlood.dir/main.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/main.cpp.o.d"
   )
 
