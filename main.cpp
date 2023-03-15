@@ -1,4 +1,4 @@
-#include "SDL_config.h"
+#include "Application.h"
 #include "Input/Input.h"
 #include <iostream>
 
@@ -23,7 +23,10 @@
 
 int main(int, char**){
 
-    openNewWindow();
+    Application app;
+
+    app.update();
+    app.draw();
 
     //This gameloop is a single frame. Ill have to time it so that it runs at around 60fps
     // bool isRunning = true;
