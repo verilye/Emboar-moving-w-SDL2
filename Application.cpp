@@ -41,6 +41,9 @@ void Application::loop()
     {
         while (SDL_PollEvent(&m_window_event) > 0)
         {
+
+            m_emboar.handle_events(m_window_event);
+
             switch (m_window_event.type)
             {
             case SDL_QUIT:

@@ -5,7 +5,8 @@
 #include <SDL2/SDL_image.h>
 // #include "Spritesheet.h"
 
-class Emboar{
+class Emboar
+{
 
 public:
     Emboar();
@@ -13,13 +14,24 @@ public:
 
     void update(double delta_time);
     void draw(SDL_Surface *window_surface);
+    void handle_events(SDL_Event const &event);
+
+    enum class Direction
+    {
+        NONE,
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    };
 
 private:
-    
+    Direction m_direction;
+
     SDL_Surface *m_image;
-    SDL_Rect     m_position;
-    double       m_x;
-    double       m_y;
+    SDL_Rect m_position;
+    double m_x;
+    double m_y;
 };
 
 #endif
