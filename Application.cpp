@@ -2,27 +2,19 @@
 
 Application::Application(){
 
-    if(SDL_Init(SDL_INIT_VIDEO) < 0)
-    {
-        std::cout << "Failed to initialize the SDL2 library\n";
-        return;
-    }
-
-    // Create a window with SDL2 (operating system neutral)
-
-    SDL_Window *window = SDL_CreateWindow("SDL2 Window",
+    m_window = SDL_CreateWindow("SDL2 Window",
                                           SDL_WINDOWPOS_CENTERED,
                                           SDL_WINDOWPOS_CENTERED,
                                           1000, 800,
                                           0);
 
-    if(!window)
+    if(!m_window)
     {
         std::cout << "Failed to create window\n";
         return;
     }
 
-    m_window_surface = SDL_GetWindowSurface(window);
+    m_window_surface = SDL_GetWindowSurface(m_window);
 
     if(!m_window_surface)
     {
@@ -30,6 +22,8 @@ Application::Application(){
         std::cout << "SDL2 Error: "<< SDL_GetError()<<"\n";
         return;
     }
+
+    m_image = load_surface("Pacman.png");
 
 };
 
@@ -44,16 +38,9 @@ Application::~Application()
 
 void Application::loop(){
 
-    SDL_Surface* emboar = IMG_Load("Emboar.png");
+}
 
-    SDL_Surface* optimisedSurface = SDL_ConvertSurface(emboar, m_window_surface->format, 0);
-
-    if(!optimisedSurface)
-    {
-        std::cout << "Failed to load image\n";
-        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
-        return;
-    }
+void Application::update(){
 
     bool keep_window_open = true;
     while(keep_window_open)
@@ -67,25 +54,14 @@ void Application::loop(){
                     keep_window_open = false;
                     break;
             }
-
-            
-
-            SDL_BlitSurface(optimisedSurface, nullptr, m_window_surface, nullptr);
-
-            // update(1.0/60);
+            //     SDL_BlitSurface(optimisedSurface, NULL, m_window_surface, NULL);
+            //     SDL_UpdateWindowSurface(window);
             draw();
         }
     }
+
+
 }
-
-// void Application::update(double delta_time){
-
-//     // This block keeps the window open and waits for a close window event
-//     // Also draws the updated surface to window
-
-//     m_image_position.x = m_image_position.x + (1 * delta_time);
-
-// }
 
 void Application::draw(){
 
@@ -93,17 +69,32 @@ void Application::draw(){
 
     // m_emboar.draw(m_window_surface);
 
+    SDL_BlitSurface(m_image, NULL, m_window_surface, NULL);
+
     SDL_UpdateWindowSurface(m_window);
 
 }
 
-SDL_Surface *load_surface(char const *path){
-    
-    SDL_Surface *image_surface = SDL_LoadBMP(path);
+SDL_Surface * Application::load_surface(char const *path){
 
-    if(!image_surface){
-        return 0;
+    SDL_Surface* optimisedSurface = NULL;
+    SDL_Surface* image = IMG_Load(path);
+
+    if(!image)
+    {
+        std::cout << "Failed to load image\n";
+        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
+        return NULL;
+    }else{
+
+        optimisedSurface = SDL_ConvertSurface(image, m_window_surface->format, 0);
+
+        if(optimisedSurface == NULL){
+            printf ("Unable to optimise image! SDL Error: ", SDL_GetError());
+        }
+
+        SDL_FreeSurface(image);
     }
 
-    return image_surface;
+    return optimisedSurface;
 }
