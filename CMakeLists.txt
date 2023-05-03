@@ -10,7 +10,7 @@ include_directories(BarbarianBlood ${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIR
 include(CTest)
 enable_testing()
 
-add_executable(BarbarianBlood main.cpp Application.cpp  )
+add_executable(BarbarianBlood main.cpp Application.cpp Emboar.cpp)
 target_link_libraries(BarbarianBlood ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

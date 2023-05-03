@@ -2,11 +2,11 @@
 
 Emboar::Emboar(){
 
-    m_image = IMG_Load("Emboar.png");
+    m_image = IMG_Load("Pacman.png");
 
     m_position.x = 0;
     m_position.y = 0;
-    m_position.w = 44;
+    m_position.w = 22;
     m_position.h = 43;
 
     m_x = 0.0;
@@ -21,11 +21,5 @@ void Emboar::update(double delta_time){
 
 void Emboar::draw(SDL_Surface *window_surface){
 
-    SDL_Surface* optimisedSurface = SDL_ConvertSurface(m_image, window_surface->format, 0);
-
-    if(!optimisedSurface){
-        printf( "Unable to optimize image! SDL Error:", SDL_GetError() );
-    }
-
-    SDL_BlitSurface(optimisedSurface, nullptr, window_surface, &m_position);
+    SDL_BlitSurface(m_image, nullptr, window_surface, &m_position);
 }

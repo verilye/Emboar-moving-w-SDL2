@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/connorlogan/Desktop/BarbarianBlood/Application.cpp" "CMakeFiles/BarbarianBlood.dir/Application.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/Application.cpp.o.d"
+  "/home/connorlogan/Desktop/BarbarianBlood/Emboar.cpp" "CMakeFiles/BarbarianBlood.dir/Emboar.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/Emboar.cpp.o.d"
   "/home/connorlogan/Desktop/BarbarianBlood/main.cpp" "CMakeFiles/BarbarianBlood.dir/main.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/main.cpp.o.d"
   )
 

@@ -547,6 +547,30 @@ Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Application.cpp.s
 .PHONY : Application.cpp.s
 
+Emboar.o: Emboar.cpp.o
+.PHONY : Emboar.o
+
+# target to build an object file
+Emboar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Emboar.cpp.o
+.PHONY : Emboar.cpp.o
+
+Emboar.i: Emboar.cpp.i
+.PHONY : Emboar.i
+
+# target to preprocess a source file
+Emboar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Emboar.cpp.i
+.PHONY : Emboar.cpp.i
+
+Emboar.s: Emboar.cpp.s
+.PHONY : Emboar.s
+
+# target to generate assembly for a file
+Emboar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Emboar.cpp.s
+.PHONY : Emboar.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -614,6 +638,9 @@ help:
 	@echo "... Application.o"
 	@echo "... Application.i"
 	@echo "... Application.s"
+	@echo "... Emboar.o"
+	@echo "... Emboar.i"
+	@echo "... Emboar.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

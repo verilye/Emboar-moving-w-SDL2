@@ -24,15 +24,6 @@ Application::Application()
         return;
     }
 
-    m_image = load_surface("Pacman.png");
-
-    m_image_x = 0;
-    m_image_y = 0;
-
-    m_image_position.x = 0;
-    m_image_position.y = 0;
-    m_image_position.w = 22;
-    m_image_position.h = 43;
 };
 
 Application::~Application()
@@ -66,16 +57,15 @@ void Application::loop()
 void Application::update(double delta_time)
 {
 
-    m_image_x = m_image_x + (5 * delta_time);
-    m_image_position.x = m_image_x;
+    m_emboar.update(delta_time);
 }
 
 void Application::draw()
 {
 
-    SDL_FillRect(m_window_surface, NULL, SDL_MapRGB(m_window_surface->format, 0, 0, 0));
+    SDL_FillRect(m_window_surface, nullptr, SDL_MapRGB(m_window_surface->format, 0, 0, 0));
 
-    SDL_BlitSurface(m_image, NULL, m_window_surface, &m_image_position);
+    m_emboar.draw(m_window_surface);
 
     SDL_UpdateWindowSurface(m_window);
 }
