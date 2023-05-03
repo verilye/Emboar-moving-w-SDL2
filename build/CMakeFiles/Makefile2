@@ -837,12 +837,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/BarbarianBlood.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles --progress-num=1,2,3,4 "Built target BarbarianBlood"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target BarbarianBlood"
 .PHONY : CMakeFiles/BarbarianBlood.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BarbarianBlood.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BarbarianBlood.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/connorlogan/Desktop/BarbarianBlood/build/CMakeFiles 0
 .PHONY : CMakeFiles/BarbarianBlood.dir/rule

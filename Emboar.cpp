@@ -3,7 +3,7 @@
 Emboar::Emboar()
 {
 
-    m_image = IMG_Load("Pacman.png");
+    m_spritesheet = new Spritesheet("Emboar.png", 4, 6);
 
     m_position.x = 0;
     m_position.y = 0;
@@ -11,7 +11,9 @@ Emboar::Emboar()
     m_position.h = 43;
 
     m_x = 0.0;
-    m_y = 0.0;
+    m_y = 0.0; 
+
+    m_spritesheet->select_sprite(4,0);
 }
 
 void Emboar::update(double delta_time)
@@ -43,7 +45,7 @@ void Emboar::update(double delta_time)
 void Emboar::draw(SDL_Surface *window_surface)
 {
 
-    SDL_BlitSurface(m_image, nullptr, window_surface, &m_position);
+    m_spritesheet ->draw_selected_sprite(window_surface, &m_position);
 }
 
 void Emboar::handle_events(SDL_Event const &event)

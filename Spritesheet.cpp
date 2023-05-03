@@ -1,11 +1,12 @@
-#include "Spritesheet.h";
+#include "Spritesheet.h"
 
 Spritesheet::Spritesheet(char const *path, int row, int column)
 {
-    m_spritesheet_image = SDL_LoadBMP(path);
+    m_spritesheet_image = IMG_Load(path);
 
     m_clip.w = m_spritesheet_image->w / column;
     m_clip.h = m_spritesheet_image->h / row;
+
 }
 
 Spritesheet::~Spritesheet()

@@ -3,7 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-// #include "Spritesheet.h"
+#include "Spritesheet.h"
 
 class Emboar
 {
@@ -26,9 +26,9 @@ public:
     };
 
 private:
-    Direction m_direction;
 
-    SDL_Surface *m_image;
+    Direction m_direction;
+    Spritesheet * m_spritesheet;
     SDL_Rect m_position;
     double m_x;
     double m_y;

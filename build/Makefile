@@ -571,6 +571,30 @@ Emboar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Emboar.cpp.s
 .PHONY : Emboar.cpp.s
 
+Spritesheet.o: Spritesheet.cpp.o
+.PHONY : Spritesheet.o
+
+# target to build an object file
+Spritesheet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Spritesheet.cpp.o
+.PHONY : Spritesheet.cpp.o
+
+Spritesheet.i: Spritesheet.cpp.i
+.PHONY : Spritesheet.i
+
+# target to preprocess a source file
+Spritesheet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Spritesheet.cpp.i
+.PHONY : Spritesheet.cpp.i
+
+Spritesheet.s: Spritesheet.cpp.s
+.PHONY : Spritesheet.s
+
+# target to generate assembly for a file
+Spritesheet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarbarianBlood.dir/build.make CMakeFiles/BarbarianBlood.dir/Spritesheet.cpp.s
+.PHONY : Spritesheet.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -641,6 +665,9 @@ help:
 	@echo "... Emboar.o"
 	@echo "... Emboar.i"
 	@echo "... Emboar.s"
+	@echo "... Spritesheet.o"
+	@echo "... Spritesheet.i"
+	@echo "... Spritesheet.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

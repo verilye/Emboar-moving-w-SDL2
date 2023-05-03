@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BarbarianBlood.dir/Application.cpp.o.d"
   "CMakeFiles/BarbarianBlood.dir/Emboar.cpp.o"
   "CMakeFiles/BarbarianBlood.dir/Emboar.cpp.o.d"
+  "CMakeFiles/BarbarianBlood.dir/Spritesheet.cpp.o"
+  "CMakeFiles/BarbarianBlood.dir/Spritesheet.cpp.o.d"
   "CMakeFiles/BarbarianBlood.dir/main.cpp.o"
   "CMakeFiles/BarbarianBlood.dir/main.cpp.o.d"
 )
