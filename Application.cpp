@@ -73,6 +73,8 @@ void Application::update(double delta_time)
 void Application::draw()
 {
 
+    SDL_FillRect(m_window_surface, NULL, SDL_MapRGB(m_window_surface->format, 0, 0, 0));
+
     SDL_BlitSurface(m_image, NULL, m_window_surface, &m_image_position);
 
     SDL_UpdateWindowSurface(m_window);
