@@ -2,11 +2,13 @@
 {
   "directory": "/home/connorlogan/Desktop/BarbarianBlood/build",
   "command": "/usr/bin/g++  -I/home/connorlogan/Desktop/BarbarianBlood/BarbarianBlood -isystem /usr/include/SDL2 -g -o CMakeFiles/BarbarianBlood.dir/main.cpp.o -c /home/connorlogan/Desktop/BarbarianBlood/main.cpp",
-  "file": "/home/connorlogan/Desktop/BarbarianBlood/main.cpp"
+  "file": "/home/connorlogan/Desktop/BarbarianBlood/main.cpp",
+  "output": "CMakeFiles/BarbarianBlood.dir/main.cpp.o"
 },
 {
   "directory": "/home/connorlogan/Desktop/BarbarianBlood/build",
-  "command": "/usr/bin/g++  -I/home/connorlogan/Desktop/BarbarianBlood/BarbarianBlood -isystem /usr/include/SDL2 -g -o CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o -c /home/connorlogan/Desktop/BarbarianBlood/SDL_config.cpp",
-  "file": "/home/connorlogan/Desktop/BarbarianBlood/SDL_config.cpp"
+  "command": "/usr/bin/g++  -I/home/connorlogan/Desktop/BarbarianBlood/BarbarianBlood -isystem /usr/include/SDL2 -g -o CMakeFiles/BarbarianBlood.dir/Application.cpp.o -c /home/connorlogan/Desktop/BarbarianBlood/Application.cpp",
+  "file": "/home/connorlogan/Desktop/BarbarianBlood/Application.cpp",
+  "output": "CMakeFiles/BarbarianBlood.dir/Application.cpp.o"
 }
 ]

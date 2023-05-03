@@ -2,44 +2,79 @@
 #include "Input/Input.h"
 #include <iostream>
 
-// Compile and build setup with CMAKe
-// Setup in cmake
-// https://code.visualstudio.com/docs/cpp/cmake-linux
-// Go down to the bottom bar and select build in vscode
-// Press f5 to run current version of project
-
-// HELPFUL LINKS
-
-// 2D game physics engine
-// https://developer.ibm.com/tutorials/wa-build2dphysicsengine/ 
-
-// Potentially use an already created game engine UI (NOT INGAME UI)
-// https://github.com/ocornut/imgui 
-
-// Scripting for faster implementation?? Lua, C#, python??
-
 // This game will run on an entity component system
 // An entity is a thing in the game, components are attributes of the thing
 
 int main(int, char**){
 
-    Application app;
+    if(SDL_Init(SDL_INIT_VIDEO) < 0)
+    {
+        std::cout << "Failed to initialize the SDL2 library\n";
+        return -1;
+    }
 
-    app.update();
-    app.draw();
+    // Create a window with SDL2 (operating system neutral)
 
-    //This gameloop is a single frame. Ill have to time it so that it runs at around 60fps
-    // bool isRunning = true;
-    // while(isRunning){
+    SDL_Window *window = SDL_CreateWindow("SDL2 Window",
+                                          SDL_WINDOWPOS_CENTERED,
+                                          SDL_WINDOWPOS_CENTERED,
+                                          1000, 800,
+                                          0);
 
-    //     // Take any input from user
-    //     // Abstract it out using an interface
-    //     Input();
-    //     // Update the screen. This should continue even when no actions are being taken 
-    //     Update();
-    //     // Render these updates to screen
-    //     Render();
-    // }
+    if(!window)
+    {
+        std::cout << "Failed to create window\n";
+        return -1;
+    }
+
+    SDL_Surface* m_window_surface = SDL_GetWindowSurface(window);
+
+    if(!m_window_surface)
+    {
+        std::cout << "Failed to get the surface from the window\n";
+        std::cout << "SDL2 Error: "<< SDL_GetError()<<"\n";
+        return -1;
+    }
+
+    SDL_Surface* optimisedSurface = NULL;
+    SDL_Surface* image = IMG_Load("Emboar.png");
+
+
+    if(!image)
+    {
+        std::cout << "Failed to load image\n";
+        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
+        return -1;
+    }else{
+
+        optimisedSurface = SDL_ConvertSurface(image, m_window_surface->format, 0);
+
+        if(optimisedSurface == NULL){
+            printf ("Unable to optimise image! SDL Error: ", SDL_GetError());
+        }
+
+        SDL_FreeSurface(image);
+    }
+
+    bool keep_window_open = true;
+    while(keep_window_open)
+    {
+        SDL_Event e;
+        while(SDL_PollEvent(&e) > 0)
+        {
+            switch(e.type)
+            {
+                case SDL_QUIT:
+                    keep_window_open = false;
+                    break;
+            }
+
+            
+
+            SDL_BlitSurface(optimisedSurface, NULL, m_window_surface, NULL);
+            SDL_UpdateWindowSurface(window);
+        }
+    }
     
     return 1;
 }

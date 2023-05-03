@@ -1,7 +1,7 @@
 CMakeFiles/BarbarianBlood.dir/main.cpp.o: \
  /home/connorlogan/Desktop/BarbarianBlood/main.cpp \
  /usr/include/stdc-predef.h \
- /home/connorlogan/Desktop/BarbarianBlood/SDL_config.h \
+ /home/connorlogan/Desktop/BarbarianBlood/Application.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -257,5 +257,6 @@ CMakeFiles/BarbarianBlood.dir/main.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
+ /home/connorlogan/Desktop/BarbarianBlood/Emboar.h \
  /home/connorlogan/Desktop/BarbarianBlood/Input/Input.h \
  /home/connorlogan/Desktop/BarbarianBlood/Input/KeyboardListener.h

@@ -1,13 +1,7 @@
 #ifndef SPRITESHEET
 #define SPRITESHEET
 
-
-
-// https://dev.to/noah11012/using-sdl2-spritesheets-46h5
-
-// Tutorial for writing a sprite sheet to screen
-
-#include "SDL_config.h"
+#include "Application.h"
 
 class Spritesheet
 {

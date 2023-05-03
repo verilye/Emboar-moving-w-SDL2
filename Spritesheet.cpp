@@ -2,7 +2,7 @@
 
 Spritesheet::Spritesheet(char const *path, int row, int column)
 {
-    // m_spritesheet_image = load_bmp(path);
+    m_spritesheet_image = SDL_LoadBMP(path);
 
     m_clip.w = m_spritesheet_image->w / column;
     m_clip.h = m_spritesheet_image->h / row;
@@ -11,7 +11,7 @@ Spritesheet::Spritesheet(char const *path, int row, int column)
 Spritesheet::~Spritesheet()
 {
     SDL_FreeSurface(m_spritesheet_image);
-}
+}   
 
 void Spritesheet::select_sprite(int x, int y)
 {

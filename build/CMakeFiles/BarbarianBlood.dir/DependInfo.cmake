@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/connorlogan/Desktop/BarbarianBlood/SDL_config.cpp" "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/SDL_config.cpp.o.d"
+  "/home/connorlogan/Desktop/BarbarianBlood/Application.cpp" "CMakeFiles/BarbarianBlood.dir/Application.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/Application.cpp.o.d"
   "/home/connorlogan/Desktop/BarbarianBlood/main.cpp" "CMakeFiles/BarbarianBlood.dir/main.cpp.o" "gcc" "CMakeFiles/BarbarianBlood.dir/main.cpp.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
