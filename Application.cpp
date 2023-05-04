@@ -6,7 +6,7 @@ Application::Application()
     m_window = SDL_CreateWindow("SDL2 Window",
                                 SDL_WINDOWPOS_CENTERED,
                                 SDL_WINDOWPOS_CENTERED,
-                                1000, 800,
+                                1920, 1080,
                                 0);
 
     if (!m_window)

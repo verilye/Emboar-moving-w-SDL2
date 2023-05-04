@@ -25,10 +25,19 @@ public:
         RIGHT
     };
 
+    int const SPRITESHEET_UP = 3;
+    int const SPRITESHEET_DOWN = 0;
+    int const SPRITESHEET_LEFT = 1;
+    int const SPRITESHEET_RIGHT = 2;
+
+    
+
 private:
 
+    int m_spritesheet_column;
+
     Direction m_direction;
-    Spritesheet * m_spritesheet;
+    Spritesheet *m_spritesheet;
     SDL_Rect m_position;
     double m_x;
     double m_y;
